@@ -19,6 +19,8 @@ matrix:
     - php: hhvm
   fast_finish: true
 
+dist: trusty
+
 # Customize when the notification emails are sent.
 notifications:
     on_success: never
