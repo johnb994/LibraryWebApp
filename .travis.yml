@@ -1,4 +1,4 @@
- Config file for https://travis-ci.org/
+ #Config file for https://travis-ci.org/
 language: php
 
 # Define the php versions against we want to test our code
