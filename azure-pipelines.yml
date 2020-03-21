@@ -25,3 +25,12 @@ steps:
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       replaceExistingArchive: true
+
+- task: BuildQualityChecks@6
+  inputs:
+    checkWarnings: true
+    warningFailOption: 'build'
+    checkCoverage: true
+    coverageFailOption: 'build'
+    coverageType: 'blocks'
+    runTitle: 'Build Quality Check'
