@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,9 +97,33 @@
         <div class="row mb-5">
           <div class="col-md-7">
             <h2 class="heading">Features Of This Book</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum repudiandae provident neque voluptas
-              odio nostrum officiis debitis et vitae, dolorem placeat fugiat recusandae aperiam aspernatur expedita
-              alias, officia. Suscipit!</p>
+            <p><?php
+
+require 'login.php';
+
+echo 'idbook ' . 'book_name ' . 'genre ' . 'author';
+
+$query = "SELECT * FROM book";
+
+if ($result = mysqli_query($link, $query))
+{
+  while ($row = mysqli_fetch_assoc($result)) { // Important line !!!
+      echo "<tr>";
+      foreach ($row as $field => $value) { // If you want you can right this line like this: foreach($row as $value) {
+          echo "<td> " . $value . " </td><br>"; 
+      }
+      echo "</tr>";
+  }
+  echo "</table>";
+
+}
+else
+{
+    echo " Error in execution";
+}
+
+
+?></p>
           </div>
         </div>
         <div class="row">
