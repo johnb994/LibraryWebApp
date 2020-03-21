@@ -25,5 +25,3 @@ steps:
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       replaceExistingArchive: true
-
-- task: SonarQubeAnalyze@4
