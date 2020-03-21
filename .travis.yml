@@ -11,3 +11,5 @@ script: vendor/bin/atoum
 
 notifications:
   slack: comp-4110project:keEH1mL1AkgTvZVQ8jfcahKU
+  
+  
