@@ -9,8 +9,6 @@ php:
 services:
 - mysql
 
-before-install:
- - mysql -u root --password="" < travis.sql
 
 before_script: composer require atoum/atoum
 script: vendor/bin/atoum
