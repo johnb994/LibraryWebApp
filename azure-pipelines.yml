@@ -17,6 +17,15 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+  
+# - task: VSTest@2
+#   inputs:
+#       testSelector: 'testAssemblies'
+#       testAssemblyVer2: |
+#         **\*test*.dll
+#         !**\*TestAdapter.dll
+#         !**\obj\**
+#       searchFolder: '$(System.DefaultWorkingDirectory)'
 
 - task: ArchiveFiles@2
   inputs:
@@ -26,11 +35,11 @@ steps:
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       replaceExistingArchive: true
 
-- task: BuildQualityChecks@6
-  inputs:
-    checkWarnings: true
-    warningFailOption: 'build'
-    checkCoverage: true
-    coverageFailOption: 'build'
-    coverageType: 'blocks'
-    runTitle: 'Build Quality Check'
+# - task: BuildQualityChecks@6
+#   inputs:
+#     checkWarnings: true
+#     warningFailOption: 'build'
+#     checkCoverage: true
+#     coverageFailOption: 'build'
+#     coverageType: 'blocks'
+#     runTitle: 'Build Quality Check'
