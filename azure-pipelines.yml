@@ -38,3 +38,7 @@ steps:
 - task: AccessibilityChecker@0
   inputs:
     tagoptions: 'wcag2a'
+
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BrowserStackAPI'
