@@ -26,14 +26,6 @@ steps:
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       replaceExistingArchive: true
 
-- task: PublishCucumberReport@1
-  inputs:
-    jsonDir: '$(System.DefaultWorkingDirectory)'
-    outputPath: '$(Sytem.DefaultWorkingDirectory)'
-    theme: 'bootstrap'
-    reportSuiteAsScenarios: true
-    title: 'Cucumber Report'
-
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStackAPI'
