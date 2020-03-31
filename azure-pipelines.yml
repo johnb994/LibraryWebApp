@@ -26,19 +26,11 @@ steps:
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
       replaceExistingArchive: true
 
-# - task: BuildQualityChecks@6
-#   inputs:
-#     checkWarnings: true
-#     warningFailOption: 'build'
-#     checkCoverage: true
-#     coverageFailOption: 'build'
-#     coverageType: 'blocks'
-#     runTitle: 'Build Quality Check'
-
-- task: AccessibilityChecker@0
-  inputs:
-    tagoptions: 'wcag2a'
-
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStackAPI'
+
+# - task: AccessibilityChecker@0
+#   inputs:
+#     tagoptions: 'wcag2a'
+
