@@ -32,6 +32,11 @@ steps:
 
 - task: BrowserStackResults@0
 
+- task: broken-link-checker@0
+  inputs:
+    baseurl: 'moham12u@uwindsor.ca'
+    headOrGet: 'head'
+
 # - task: AccessibilityChecker@0
 #   inputs:
 #     tagoptions: 'wcag2a'
