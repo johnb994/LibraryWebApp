@@ -30,6 +30,8 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStackAPI'
 
+- task: BrowserStackResults@0
+
 # - task: AccessibilityChecker@0
 #   inputs:
 #     tagoptions: 'wcag2a'
