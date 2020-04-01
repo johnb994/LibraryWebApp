@@ -37,6 +37,13 @@ steps:
     baseurl: 'http://moham12u.myweb.cs.uwindsor.ca/'
     headOrGet: 'head'
 
+- task: BuildQualityChecks@6
+  inputs:
+    checkCoverage: true
+    coverageFailOption: 'build'
+    coverageType: 'blocks'
+    runTitle: 'Build Quality Checks'
+
 # - task: AccessibilityChecker@0
 #   inputs:
 #     tagoptions: 'wcag2a'
