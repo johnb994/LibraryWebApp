@@ -1,8 +1,21 @@
-
-language: php
 php:
-  - 5.3
-  - 5.4
-script:
-  - bin/atoum --test-all
-  
+ - 7.1
+ - 7.2
+
+ language: node_js
+
+ node_js:
+
+   - '6'
+   - '4'
+
+ services:
+ - mysql
+script: vendor/bin/atoum
+ notifications:
+   slack: comp-4110project:keEH1mL1AkgTvZVQ8jfcahKU
+
+   addons:
+   browserstack:
+     username: sanadali2
+     access_key: w7uyBxPyjHm88H7AEEeL
