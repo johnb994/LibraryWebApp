@@ -1,18 +1,20 @@
- #Config file for https://travis-ci.org/
-language: php
-
-# Define the php versions against we want to test our code
-php:
-- 7.1
-- 7.2
-
-
-services:
-- mysql
-
-
-before_script: composer require atoum/atoum
-script: vendor/bin/atoum
+udo: false
+language: node_js
+node_js:
+- '8'
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - node_modules
+before_install:
+- npm update
+install:
+- npm install
+script:
+- npm test
+- npm run coveralls
 
 notifications:
   slack: comp-4110project:keEH1mL1AkgTvZVQ8jfcahKU
