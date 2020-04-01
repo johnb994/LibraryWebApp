@@ -1,27 +1,8 @@
-udo: false
-language: node_js
-node_js:
-- '8'
-branches:
-  only:
-  - master
-cache:
-  directories:
-  - node_modules
-before_install:
-- npm update
-install:
-- npm install
-script:
-- npm test
-- npm run coveralls
 
-notifications:
-  slack: comp-4110project:keEH1mL1AkgTvZVQ8jfcahKU
-  
-  addons:
-  browserstack:
-    username: sanadali2
-    access_key: w7uyBxPyjHm88H7AEEeL
-    
+language: php
+php:
+  - 5.3
+  - 5.4
+script:
+  - bin/atoum --test-all
   
